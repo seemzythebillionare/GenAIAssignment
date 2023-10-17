@@ -1,0 +1,132 @@
+﻿
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    /*overflow: hidden; /* Prevents horizontal scrollbars */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* Prevents horizontal scrollbars */
+}
+
+/* Style the video to cover the entire container */
+.video {
+    position: absolute;
+    @*top: 0;
+    left: 0;
+    *@ width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, 0.4);
+    z-index: -1;
+}
+
+
+#main-heading {
+    position: absolute;
+    top: 8%;
+    width: 100%;
+    height: 100%;
+    font-family: 'Anton', sans-serif;
+    background-image: linear-gradient(to right, brown, brown, yellow, white, yellow, brown, brown);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: brown;
+    padding: 9vw 2vw 0 2vw;
+    text-align: center;
+    font-size: 8vw;
+    z-index: 1;
+}
+
+#text-below-heading {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+    text-align: center;
+    color: #fff; /* Set the text color to white */
+    width: 80%;
+}
+
+/* Container for text and image */
+#container {
+    text-align: center;
+    padding: 2vw;
+}
+
+/* Text within the container */
+#container-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2vw;
+    color: #fff;
+    text-align: center;
+    margin-top: 20vw;
+}
+
+/* Image within the container */
+#container-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Image Container */
+#image-container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+#image-background {
+    width: 100%;
+    height: 100%;
+}
+
+#image-text {
+    position: absolute;
+    top: 10%; /* Adjust this value to control the vertical position of the text */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: center;
+    z-index: 3; /* Set the z-index to make text appear on top of the image */
+}
+
+
+
+
+/* Responsive styles for screens with viewport width ≥ 768px */
+@@media screen and (min-width: 768px) {
+    #main-heading {
+        font-size: 7vw; /* Adjust font size for larger screens */
+    }
+
+    #text-below-heading {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.6vw;
+        text-align: center;
+        color: #fff;
+        width: 55%;
+    }
+}
+

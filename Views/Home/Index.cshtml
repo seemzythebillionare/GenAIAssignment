@@ -1,98 +1,195 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-    
+
 }
 
+
 <html>
-    <head>
+<head>
     <style type="text/css">
-  
 
-   .video-container {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-   }
 
-    body {
-        margin: 0;
-        padding: 0;
       
-        overflow: hidden; /* Prevents horizontal scrollbars */
-    }
 
-    .video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ensure video covers the entire container */
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            
+            /*overflow: hidden; /* Prevents horizontal scrollbars */
+        }
 
-     .video-background {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        z-index: -1;
-     }
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden; /* Prevents horizontal scrollbars */
+        }
 
-    #overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(1, 1, 1, 0.4);
-        z-index: -1;
-    }
+        /* Style the video to cover the entire container */
+        .video {
+            position: absolute;
+          @*top: 0;
+            left: 0; *@
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+      
+
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(1, 1, 1, 0.4);
+            z-index: -1;
+        }
 
 
-    #main-heading {
-        position: absolute;
-        top: 8;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        font-family: 'Anton', sans-serif;
-        background-image: linear-gradient(to right, brown, brown, yellow, white, yellow, brown, brown);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: brown;
-        padding: 9vw 2vw 0 2vw;
-        text-align: center;
-        font-size: 8vw;
-        z-index: 1;
-    }
+        #main-heading {
+            position:absolute;
+            top: 8%;
+           
+            width: 100%;
+            height: 100%;
+            font-family: 'Anton', sans-serif;
+            background-image: linear-gradient(to right, brown, brown, yellow, white, yellow, brown, brown);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: brown;
+            padding: 9vw 2vw 0 2vw;
+            text-align: center;
+            font-size: 8vw;
+            z-index: 1;
+        }
 
-    #text-below-heading {
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-family: 'Montserrat', sans-serif;
-        font-size: 2vw;
-        text-align: center;
-        color: #fff; /* Set the text color to white */
-        width: 80%;
-    }
+        #text-below-heading {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2vw;
+            text-align: center;
+            color: #fff; /* Set the text color to white */
+            width: 80%;
+        }
 
-    /* Responsive styles for screens with viewport width ≥ 768px */
+        /* Container for text and image */
+        #container {
+            text-align: center;
+            padding: 2vw;
+        }
+
+        /* Text within the container */
+        #container-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2vw;
+            color: #fff;
+            text-align: center;
+            margin-top: 20vw; 
+        }
+
+        /* Image within the container */
+        #container-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Image Container */
+        #image-container {
+            width: 100%;
+            height: 100vh; 
+            position: relative;
+            z-index: 1; 
+            
+        }
+
+        #image-background {
+            width: 100%;
+           height:240%
+
+        
+           
+        }
+
+        #image-text {
+            
+            position: absolute;
+            top: 10%; 
+            left: 34%;
+            transform: translateX(-50%);
+            color: #fff;
+          
+            z-index: 3; 
+          
+        }
+
+        .inner-text-container{
+            /background-color:aqua;
+            width:50%;
+        }
+
+        .text-colour {
+            color:orange;
+            font-size:40px;
+        }
+
+        .read-more{
+            padding:2px;
+            border:solid;
+            border-radius:5px;
+            margin-left:0.5px;
+            font-style:normal;
+           
+
+        }
+
+
+        read-more:hover {
+            cursor: pointer;
+        }
+
+        .second-parent-container{
+            display:flex;
+            justify-content:space-between;
+            /background-color:red;
+            width:145%;
+            border-top: 1.3px solid;
+            padding-top: 30px;
+            border-bottom: 1.3px solid;
+            padding-bottom: 30px;
+            margin-bottom:55px;
+           
+            
+        }
+
+        .inner-box {
+            margin-left:7px;
+        }
+
+        .inner-paragraph {
+            color:aqua;
+        }
+
+        .inner-span {
+            color: white;
+        }
+
+        .wikipedia {
+            font-style:italic;
+        }
+
+        /* Responsive styles for screens with viewport width ≥ 768px */
         @@media screen and (min-width: 768px) {
             #main-heading {
                 font-size: 7vw; /* Adjust font size for larger screens */
             }
 
             #text-below-heading {
-                
                 font-family: 'Montserrat', sans-serif;
                 font-size: 1.6vw;
                 text-align: center;
@@ -100,24 +197,153 @@
                 width: 55%;
             }
         }
-</style>
 
+    </style>
 
+    
 </head>
 
 <body>
-    <video loop muted preload="auto" autoplay="autoplay" class="video-background ">
-        <source src="~/assets/video.mp4" type="video/mp4" />
-    </video>
+    <div class="video-container">
+        <video loop muted preload="auto" autoplay="autoplay" class="video">
+            <source src="~/assets/video.mp4" type="video/mp4" />
+        </video>
+        <div id="overlay"></div>
+        <h1 id="main-heading">Generative AI Technology</h1>
+        <div id="text-below-heading">
+            Any time an AI technology is generating something on its own, it can be referred to as "generative AI." This umbrella term includes learning algorithms that make predictions as well as those that can use prompts to autonomously write articles and paint pictures.<br>
+            Techopedia
+        </div>
+    </div>
+        
+
+   
+
+    <div id="image-container">
+        <img id="image-background" src="~/assets/bg2.jpg" alt="Background Image"/>
+        <div id="image-text">
+            <div class="second-parent-container">
+                <div class="inner-text-container">
+                    <h2 class="text-colour">GENAI Tools</h2>
+                    <p>
+                        Generative AI tools refer to software or systems that use neural network techniques to process and comprehend input data, subsequently producing meaningful responses.
+                        Scribehow
+                        <span class="read-more">
+                            Read more
+                        </span>
+                    </p>
+
+                    
+                </div>
+
+                <div class="inner-boxes">
+                    <img src="~/assets/bard_thumbnail.jpg" />
+
+                    <img class="inner-box" src="~/assets/midjourney_thumbnail.jpg" />
+                </div>
+
+               
+            </div>
 
 
-     <div id="overlay"></div>
-    <h1 id="main-heading">Generative AI Technology</h1>
+            <div class="second-parent-container">
+
+                <div class="inner-boxes">
+                    <img src="~/assets/ms_thumbnail.jpg" />
+
+                    <img class="inner-box" src="~/assets/google_thumbnail.jpg" />
 
 
-    <div id="text-below-heading">
-        Any time an AI technology is generating something on its own, it can be referred to as "generative AI." This umbrella term includes learning algorithms that make predictions as well as those that can use prompts to autonomously write articles and paint pictures.<br>
-        Techopedia
+                </div>
+                <div class="inner-text-container">
+                    <h2 class="text-colour">GenAI Organizations</h2>
+                    <p>
+                        Generative AI Organizations like Microsoft, Google, Amazon and IBM have invested hundreds of millions of dollars and massive compute power to build the foundational models on which services like ChatGPT and others depend.
+                        Gartner
+
+                        <span class="read-more">
+                            Read more
+                        </span>
+                    </p>
+
+
+                </div>
+
+                
+
+
+            </div>
+
+
+            <div class="second-parent-container">
+                <div class="inner-text-container">
+                    <h2 class="text-colour">GenAI Applications</h2>
+                    <p class="inner-paragraph">
+                       Text : <span class="inner-span">GPT-3, LaMDA, LLaMA,BLOOM, and GPT-4</span>
+                       
+                    </p>
+
+
+                    <p class="inner-paragraph">
+                        Code : <span class="inner-span">OpenAI Codex</span>
+
+                    </p>
+
+                    <p class="inner-paragraph">
+                        Images : <span class="inner-span">DALL-E, Midjourney and Stable Diffusion.</span>
+                    </p>
+
+
+                    <p class="inner-paragraph">
+                        Videos : <span class="inner-span">Make-A-Video (Meta Platforms).</span>
+                    </p>
+
+                    <span class="wikipedia">
+                        Wikipedia
+                        <span class="read-more">  Read more</span>
+                      
+                    </span>
+                </div>
+
+                <div class="inner-boxes">
+                    <img src="~/assets/chatgpt_thumbnail.jpg" />
+
+                    <img class="inner-box" src="~/assets/dalle_thumbnail.jpg" />
+                </div>
+
+
+            </div>
+
+
+            <div class="second-parent-container">
+
+                <div class="inner-boxes">
+                    <img src="~/assets/pie.jpg" />
+
+                    <img class="inner-box" src="~/assets/job.jpg" />
+
+
+                </div>
+                <div class="inner-text-container">
+                    <h2 class="text-colour">AI Jobs</h2>
+                    <p>
+                        The prime source for jobs and talents in AI, ML, Data Science and Big Data:<a href="https://ai-jobs.net/"> Insights AI-Jobs</a>
+                        Python source for tables and charts: <a href="https://www.kaggle.com/code/sowrabhghosh/data-science-salary-2020-22-analysis">Kaggle</a>
+
+                        <span class="read-more">
+                            Read more
+                        </span>
+                    </p>
+
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
     </div>
 
 </body>
@@ -125,7 +351,5 @@
 
 
 </html>
-
-
 
 
