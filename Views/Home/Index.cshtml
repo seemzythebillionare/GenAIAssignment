@@ -1,0 +1,131 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    
+}
+
+<style>
+  
+
+   .video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+   }
+
+    body {
+        margin: 0;
+        padding: 0;
+      
+        overflow: hidden; /* Prevents horizontal scrollbars */
+    }
+
+    .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure video covers the entire container */
+    }
+
+     .video-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: -1;
+     }
+
+    #overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(1, 1, 1, 0.4);
+        z-index: 0;
+    }
+
+
+    #main-heading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'Anton', sans-serif;
+        background-image: linear-gradient(to right, brown, brown, yellow, white, yellow, brown, brown);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: brown;
+        padding: 9vw 2vw 0 2vw;
+        text-align: center;
+        font-size: 8vw;
+        z-index: 1;
+    }
+
+    #text-below-heading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2vw;
+        text-align: center;
+        color: #fff; /* Set the text color to white */
+        width: 80%;
+    }
+
+    /* Responsive styles for screens with viewport width ≥ 768px */
+        @media screen and (min-width: 768px) {
+            #text-below-heading {
+                display: block; /* Show the text on larger screens */
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-family: 'Montserrat', sans-serif;
+                font-size: 2vw;
+                text-align: center;
+                color: #fff;
+                width: 80%;
+            }
+        }
+</style>
+
+
+
+
+
+<html>
+<body>
+    <video class="video-background autoplay loop muted preload=" auto"">
+        <source src="~/assets/video.mp4" type="video/mp4" />
+    </video>
+
+
+     <div id="overlay"></div>
+    <h1 id="main-heading">Generative AI Technology</h1>
+
+
+    <div id="text-below-heading">
+        Any time an AI technology is generating something on its own, it can be referred to as "generative AI." This umbrella term includes learning algorithms that make predictions as well as those that can use prompts to autonomously write articles and paint pictures.<br>
+        <strong>Techopedia</strong>
+    </div>
+
+</body>
+
+
+
+</html>
+
+
+
+
