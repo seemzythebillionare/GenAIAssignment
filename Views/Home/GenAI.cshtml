@@ -1,0 +1,255 @@
+﻿
+@{
+    ViewData["Title"] = "GenAI";
+}
+
+
+
+<html>
+<head>
+    <style type="text/css">
+
+
+
+
+        body {
+            margin: 0;
+            padding: 0;
+        
+        }
+
+
+   
+        #main-heading {
+            width: 100%;
+            height: 100%;
+            font-family: 'Anton', sans-serif;
+            background-image: linear-gradient(to right, brown, brown, yellow, white, yellow, brown, brown);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: brown;
+            padding: 9vw 2vw 0 2vw;
+            text-align: center;
+            font-size: 7vw;
+            z-index: 1;
+        }
+
+        #main-heading2 {
+            width: 100%;
+            height: 100%;
+            font-family: 'Anton', sans-serif;
+            background-image: linear-gradient(to right, brown, brown, yellow, white, yellow, brown, brown);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: brown;
+            padding: 9vw 2vw 0 2vw;
+            text-align: center;
+            font-size: 5vw;
+            z-index: 1;
+        }
+
+
+        #text-below-heading {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2vw;
+            text-align: center;
+            color: #fff; /* Set the text color to white */
+            width: 80%;
+        }
+
+        /* Container for text and image */
+        #container {
+            text-align: center;
+            padding: 2vw;
+        }
+
+        /* Text within the container */
+        #container-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2vw;
+            color: #fff;
+            text-align: center;
+            margin-top: 20vw;
+        }
+
+        /* Image within the container */
+        #container-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Image Container */
+        #image-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        #image-background {
+            width: 100%;
+            height: 100%
+        }
+
+        .image-text {
+            position: absolute;
+            top: 10%;
+            left: 47%;
+            transform: translateX(-50%);
+            color: #fff;
+            z-index: 3;
+        }
+
+        .inner-text-container {
+           
+            width: 50%;
+        }
+
+        .text-colour {
+            color: orange;
+            font-size: 40px;
+        }
+
+       
+
+    
+
+        .second-parent-container {
+            display: flex;
+            justify-content: space-between;
+            width: 145%;
+           
+            padding-top: 30px;
+            
+            padding-bottom: 30px;
+            margin-bottom: 55px;
+        }
+
+        .inner-box {
+            margin-left: 7px;
+        }
+
+        .inner-paragraph {
+            color: aqua;
+        }
+
+        .inner-span {
+            color: white;
+        }
+
+        .wikipedia {
+            font-style: italic;
+        }
+
+        .a-tag {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .a-tag:hover {
+                text-decoration: none;
+                color: inherit;
+            }
+
+
+    </style>
+
+
+</head>
+
+<body>
+   
+
+
+
+
+    <div id="image-container">
+        <img id="image-background" src="~/assets/images/background/bg5.jpg" alt="Background Image" />
+        <div class="image-text" id="etai">
+            <h1 id="main-heading">GenAI Tools</h1>
+            <div class="second-parent-container">
+              
+                <div class="inner-boxes">
+                    <img src="~/assets/images/genaisites/chatgpt_thumbnail.jpg" />
+
+                    <img class="inner-box" src="~/assets/images/genaisites/bard_thumbnail.jpg" />
+
+                    <img class="inner-box" src="~/assets/images/genaisites/midjourney_thumbnail.jpg" />
+
+                    <img class="inner-box" src="~/assets/images/genaisites/dalle_thumbnail.jpg" />
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <div id="image-container">
+        <img id="image-background" src="~/assets/images/background/bg6.jpg" alt="Background Image" />
+        <div class="image-text" id="etcc">
+            <h1 id="main-heading2">GenAI Organisations</h1>
+            <div class="second-parent-container">
+
+                <div class="inner-boxes">
+                    <img src="~/assets/images/genaisites/ms_thumbnail.jpg" />
+
+                    <img class="inner-box" src="~/assets/images/genaisites/google_thumbnail.jpg" />
+
+                    <img class="inner-box" src="~/assets/images/genaisites/ibm_thumbnail.jpg" />
+
+                    <img class="inner-box" src="~/assets/images/genaisites/amazon_thumbnail.jpg" />
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+    <div id="image-container">
+        <img id="image-background" src="~/assets/images/background/bg7.jpg" alt="Background Image" />
+        <div class="image-text" id="etiot">
+            <h1 id="main-heading2">GenAI Applications</h1>
+            <div class="second-parent-container">
+
+                <div class="inner-boxes">
+                    <img src="~/assets/images/genaisites/chatgpt_thumbnail.jpg" />
+
+                    <img class="inner-box" src="~/assets/images/genaisites/githubcopilot_thumbnail.jpg" />
+
+                    <img class="inner-box" src="~/assets/images/genaisites/dalle_thumbnail.jpg" />
+
+                    <img class="inner-box" src="~/assets/images/genaisites/synthesia_thumbnail.jpg" />
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+</body>
+
+
+
+</html>
+
+
+
+
