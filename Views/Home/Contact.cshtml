@@ -1,0 +1,250 @@
+﻿
+@{
+    ViewData["Title"] = "Contact";
+}
+
+
+<html>
+<head>
+    <style type="text/css">
+
+
+
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        #main-heading {
+            width: 100%;
+            height: 100%;
+            font-family: 'Anton', sans-serif;
+            background-image: linear-gradient(to right, yellow, white, yellow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding: 9vw 2vw 0 2vw;
+            text-align: center;
+            font-size: 7vw;
+            z-index: 1;
+        }
+
+
+
+        #text-below-heading {
+            font-size: 1.5vw;
+            text-align: center;
+            color: #fff; /* Set the text color to white */
+            width: 100%;
+        }
+
+        /* Container for text and image */
+        #container {
+            text-align: center;
+            padding: 2vw;
+        }
+
+        /* Text within the container */
+        #container-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2vw;
+            color: #fff;
+            text-align: center;
+            margin-top: 20vw;
+        }
+
+        /* Image within the container */
+        #container-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Image Container */
+        #image-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        #image-background {
+            width: 100%;
+            height: 100%
+        }
+
+        .image-text {
+            position: absolute;
+            top: 10%;
+            left: 47%;
+            transform: translateX(-50%);
+            color: #fff;
+            z-index: 3;
+        }
+
+        .inner-text-container {
+            width: 50%;
+        }
+
+        .text-colour {
+            color: orange;
+            font-size: 40px;
+        }
+
+
+        .second-parent-container {
+            display: flex;
+            /justify-content: space-between;
+            width: 100%;
+            height:100%;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin-bottom: 55px;
+            padding-left:40px;
+          
+        }
+
+        .inner-box {
+            margin-left: 7px;
+        }
+
+        .box {
+           flex-direction:column;
+            margin-right:1rem;
+            width:26rem;
+            height:14.5rem;
+            padding:1.5%;
+           display:flex;
+            background-color: rgba(0, 0, 255, 0.5);
+           
+          
+         
+        }
+
+        .box-child{
+       
+            font-style:italic;
+            font-size:1.5rem;
+           color:yellow;
+            border-bottom:solid;
+
+        }
+
+        .p-wrap{
+            display:flex;
+            flex-wrap:wrap;
+        }
+
+        .p-container p{
+            margin:0;
+        }
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+
+
+    <div id="image-container">
+        <img id="image-background" src="~/assets/images/background/bg1.jpg" alt="Background Image" />
+        <div class="image-text">
+            <h1 id="main-heading">Contact & About</h1>
+
+            <div class="second-parent-container">
+
+                        <div class="box">
+                            <h1 class="box-child">
+                                Contact Us
+                            </h1>
+                            <p>
+                                The website was written by []
+                                To get in contact please email <a>Link to your email address</a>
+                            </p>
+
+
+                        </div>
+                    <div class="box">
+                        <h1 class="box-child">
+                            About Us
+                        </h1>
+                        <p class="p-wrap">
+                            This website provides an introduction to Artificial Intelligence and was created as partial fulfillment of the assessment requirements of Web Design and Programming at the University of Canberra.
+                            This site is built on the ASP.NET CORE framework and
+                            employs Bootstrap responsive design techniques.
+
+
+                        </p>
+
+                    </div>
+                  
+                    <div class="box">
+                        <h1 class="box-child">
+                            Copyright
+                        </h1>
+
+                        <div class="p-container">
+                        <p>
+                            All images used in this website were downloaded from <a href="https://unsplash.com/">Unsplash</a> .
+
+                        </p>
+
+                        <p>
+                            The icons for the footer from <a href="https://fontawesome.com/">fontawesome</a> .
+                        </p>
+
+                        <p>
+                            The Anton font used for headers from <a href="https://fonts.google.com/">Google Fonts</a> .
+                        </p>
+
+                        <p>
+                            The AI jobs dataset from <a href="https://ai-jobs.net/">Insights</a> .
+                        </p>
+
+
+                        <p>
+                            The Python source from <a href="https://www.kaggle.com/code/sowrabhghosh/data-science-salary-2020-22-analysis">Kaggle</a> .
+                        </p>
+
+                        <p>
+                            The Python web based on PyScript from <a href="https://realpython.com/pyscript-python-in-browser/">Real Python</a> .
+                        </p>
+                        </div>
+                        
+
+                       
+
+                    </div>
+                   
+              
+
+               
+
+               
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+
+
+</html>
+
+
+
+
+
+
+
