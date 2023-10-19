@@ -1,4 +1,4 @@
-/*html {
+html {
   font-size: 14px;
 }
 
@@ -18,4 +18,15 @@ body {
 }
 
 
-*/
+
+
+
+.custom-margin {
+    margin-bottom: -70px;
+    padding:0px;
+    
+}
+
+.custom-margin-1{
+    margin-top:25px
+}
