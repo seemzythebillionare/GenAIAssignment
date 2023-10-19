@@ -4,221 +4,22 @@
 }
 
 
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+
 <html>
 <head>
-    <style type="text/css">
 
+        <link href="~/css/main.css" rel="stylesheet" type="text/css"  >
 
-      
-
-        body {
-            margin: 0;
-            padding: 0;
-            
-            /*overflow: hidden; /* Prevents horizontal scrollbars */
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden; /* Prevents horizontal scrollbars */
-        }
-
-        /* Style the video to cover the entire container */
-        .video {
-            position: absolute;
-          @*top: 0;
-            left: 0; *@
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-      
-
-        #overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(1, 1, 1, 0.4);
-            z-index: -1;
-        }
-
-
-        #main-heading {
-            position:absolute;
-            top: 8%;
-           
-            width: 100%;
-            height: 100%;
-            font-family: 'Anton', sans-serif;
-            background-image: linear-gradient(to right, brown, brown, yellow, white, yellow, brown, brown);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -webkit-text-stroke-width: 1px;
-            -webkit-text-stroke-color: brown;
-            padding: 9vw 2vw 0 2vw;
-            text-align: center;
-            font-size: 8vw;
-            z-index: 1;
-        }
-
-        #text-below-heading {
-            position: absolute;
-            top: 60%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2vw;
-            text-align: center;
-            color: #fff; /* Set the text color to white */
-            width: 80%;
-        }
-
-        /* Container for text and image */
-        #container {
-            text-align: center;
-            padding: 2vw;
-        }
-
-        /* Text within the container */
-        #container-text {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2vw;
-            color: #fff;
-            text-align: center;
-            margin-top: 20vw; 
-        }
-
-        /* Image within the container */
-        #container-image {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* Image Container */
-        #image-container {
-            width: 100%;
-            height: 100vh; 
-            position: relative;
-            z-index: 1; 
-            
-        }
-
-        #image-background {
-            width: 100%;
-           height:240%
-
-        
-           
-        }
-
-        #image-text {
-            
-            position: absolute;
-            top: 10%; 
-            left: 34%;
-            transform: translateX(-50%);
-            color: #fff;
-          
-            z-index: 3; 
-          
-        }
-
-        .inner-text-container{
-            /background-color:aqua;
-            width:50%;
-        }
-
-        .text-colour {
-            color:orange;
-            font-size:40px;
-        }
-
-        .read-more{
-            padding:2px;
-            border:solid;
-            border-radius:5px;
-            margin-left:0.5px;
-            font-style:normal;
-           
-
-        }
-
-
-        read-more:hover {
-            cursor: pointer;
-        }
-
-        .second-parent-container{
-            display:flex;
-            justify-content:space-between;
-         
-            width:145%;
-            border-top: 1.3px solid;
-            padding-top: 30px;
-            border-bottom: 1.3px solid;
-            padding-bottom: 30px;
-            margin-bottom:55px;
-           
-            
-        }
-
-        .inner-box {
-            margin-left:7px;
-        }
-
-        .inner-paragraph {
-            color:aqua;
-        }
-
-        .inner-span {
-            color: white;
-        }
-
-        .wikipedia {
-            font-style:italic;
-        }
-
-        .a-tag{
-       
-            color: inherit;
-            text-decoration:none;
-          
-        }
-
-        .a-tag:hover{
-            text-decoration:none;
-                color: inherit;
-        }
-
-        /* Responsive styles for screens with viewport width ≥ 768px */
-        @@media screen and (min-width: 768px) {
-            #main-heading {
-                font-size: 7vw; 
-            }
-
-            #text-below-heading {
-                font-family: 'Montserrat', sans-serif;
-                font-size: 1.6vw;
-                text-align: center;
-                color: #fff;
-                width: 55%;
-            }
-        }
-
-    </style>
-
-    
 </head>
 
 <body>
     <div class="video-container">
         <video loop muted preload="auto" autoplay="autoplay" class="video">
-            <source src="~/assets/video.mp4" type="video/mp4" />
+            <source src="~/assets/videos/video.mp4" type="video/mp4" />
         </video>
         <div id="overlay"></div>
         <h1 id="main-heading">Generative AI Technology</h1>
@@ -232,7 +33,7 @@
    
 
     <div id="image-container">
-        <img id="image-background" src="~/assets/bg2.jpg" alt="Background Image"/>
+        <img id="image-background" src="~/assets/images/background/bg2.jpg" alt="Background Image"/>
         <div id="image-text">
             <div class="second-parent-container">
                 <div class="inner-text-container">
@@ -254,7 +55,7 @@
                 <div class="inner-boxes">
                     <img src="~/assets/images/genaisites/bard_thumbnail.jpg" />
 
-                    <img class="inner-box" src="~/assets/midjourney_thumbnail.jpg" />
+                    <img class="inner-box" src="~/assets/images/genaisites/midjourney_thumbnail.jpg" />
                 </div>
 
                
@@ -264,9 +65,9 @@
             <div class="second-parent-container">
 
                 <div class="inner-boxes">
-                    <img src="~/assets/ms_thumbnail.jpg" />
+                    <img src="~/assets/images/genaisites/ms_thumbnail.jpg" />
 
-                    <img class="inner-box" src="~/assets/google_thumbnail.jpg" />
+                    <img class="inner-box" src="~/assets/images/genaisites/google_thumbnail.jpg" />
 
 
                 </div>
@@ -329,9 +130,9 @@
                 </div>
 
                 <div class="inner-boxes">
-                    <img src="~/assets/chatgpt_thumbnail.jpg" />
+                    <img src="~/assets/images/genaisites/chatgpt_thumbnail.jpg" />
 
-                    <img class="inner-box" src="~/assets/dalle_thumbnail.jpg" />
+                    <img class="inner-box" src="~/assets/images/genaisites/dalle_thumbnail.jpg" />
                 </div>
 
 
@@ -341,9 +142,9 @@
             <div class="second-parent-container">
 
                 <div class="inner-boxes">
-                    <img src="~/assets/pie.jpg" />
+                    <img src="~/assets/images/genaisites/pie.jpg" />
 
-                    <img class="inner-box" src="~/assets/job.jpg" />
+                    <img class="inner-box" src="~/assets/images/genaisites/job.jpg" />
 
 
                 </div>
@@ -364,12 +165,34 @@
 
                 </div>
 
-
-
-
             </div>
 
+
+           
+            <div class="second-parent-container1">
+                <div class="listofgenai">
+
+                    <h1 class="text-colour">List of Generative AI Websites</h1>
+
+                    @if (SignInManager.IsSignedIn(User))
+                    {
+                        <p>  <a class="auth-a-tag" asp-area="" asp-controller="GenAI" asp-action="Create" >Click here to add a new generative AI website</a></p>
+                    }
+                    else
+                    {
+
+                        
+                        <p>Please <a class="auth-a-tag" asp-area="Identity" asp-page="/Account/Login"> login</a> or <a class="auth-a-tag" asp-area="Identity" asp-page="/Account/Register">register</a> to add a new generative AI website</p>
+                    }
+
+              
+                </div>
+            </div>
+
+               
+           
         </div>
+
     </div>
 
 </body>
